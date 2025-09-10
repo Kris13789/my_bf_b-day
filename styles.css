@@ -247,6 +247,18 @@ body::before {
   }
 }
 
+@keyframes pulse-small {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes shimmer {
   0% { left: -100%; }
   100% { left: 100%; }
@@ -410,6 +422,26 @@ body::before {
   margin-bottom: 15px;
   font-weight: 700;
   text-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+}
+
+.success-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.celebration-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(46, 204, 113, 0.3);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
+  transition: transform 0.3s ease;
+  animation: pulse-small 1.5s ease-in-out infinite;
+}
+
+.celebration-photo:hover {
+  transform: scale(1.05);
 }
 
 .success-message {
