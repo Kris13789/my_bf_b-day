@@ -73,39 +73,44 @@
             </div>
           </div>
         </div>
+
+        <div class="unlock-section">
+          <p class="unlock-text">
+            But first you need to unlock the certificate:
+          </p>
+          <button class="unlock-button" id="unlockBtn">
+            Unlock Certificate
+          </button>
+
+          <div class="task-container" id="taskContainer" style="display: none;">
+            <h3 class="task-title">Complete the phrase to unlock:</h3>
+            <p class="task-phrase">
+              Let me send you
+              <input
+                type="text"
+                id="answerInput"
+                placeholder="..."
+                class="answer-input"
+              />
+            </p>
+            <button class="submit-button" id="submitBtn">Submit</button>
+            <p class="error-message" id="errorMessage" style="display: none;">
+              Try again!
+            </p>
+          </div>
+
+          <div
+            class="success-container"
+            id="successContainer"
+            style="display: none;"
+          >
+            <h3 class="success-title">🎉 Congratulations! 🎉</h3>
+            <p class="success-message">Certificate is unlocked!</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script>
-      // Set the target date (September 13, 2026)
-      const targetDate = new Date('2026-09-13T23:59:59').getTime();
-
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const timeLeft = targetDate - now;
-
-        if (timeLeft > 0) {
-          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-          document.getElementById('days').textContent = days.toString().padStart(2, '0');
-          document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-          document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-          document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        } else {
-          // Certificate has expired
-          document.getElementById('days').textContent = '00';
-          document.getElementById('hours').textContent = '00';
-          document.getElementById('minutes').textContent = '00';
-          document.getElementById('seconds').textContent = '00';
-        }
-      }
-
-      // Update countdown immediately and then every second
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
