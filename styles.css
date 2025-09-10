@@ -47,7 +47,6 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   position: relative;
-  max-width: 380px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -88,7 +87,7 @@ body::before {
 .countdown-timer {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -96,11 +95,11 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 60px;
+  min-width: 50px;
 }
 
 .time-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #f8b500;
   text-shadow: 0 2px 8px rgba(248, 181, 0, 0.3);
@@ -506,6 +505,25 @@ body::before {
   100% {
     transform: translateY(-100px) scale(1);
     opacity: 0;
+  }
+}
+
+/* Mobile optimization for very small screens */
+@media (max-width: 375px) {
+  .countdown-timer {
+    gap: 5px;
+  }
+  
+  .time-unit {
+    min-width: 45px;
+  }
+  
+  .time-value {
+    font-size: 1.6rem;
+  }
+  
+  .time-label {
+    font-size: 0.6rem;
   }
 }
 
