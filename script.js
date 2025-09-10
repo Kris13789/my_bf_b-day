@@ -68,3 +68,14 @@ answerInput.addEventListener('keypress', function(e) {
     submitBtn.click();
   }
 });
+
+// Idea cards click functionality
+const ideaCards = document.querySelectorAll('.idea-card');
+ideaCards.forEach(card => {
+  card.addEventListener('click', function() {
+    const link = this.getAttribute('data-link');
+    if (link && link !== '#') {
+      window.open(link, '_blank');
+    }
+  });
+});
