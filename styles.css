@@ -429,6 +429,7 @@ body::before {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
   line-height: 1.6;
+  font-style: italic;
 }
 
 .answer-input {
@@ -592,43 +593,6 @@ body::before {
   100% {
     transform: translateY(-100px) scale(1);
     opacity: 0;
-  }
-}
-
-/* Mobile optimization for very small screens */
-@media (max-width: 375px) {
-  .countdown-timer {
-    gap: 5px;
-  }
-  
-  .time-unit {
-    min-width: 45px;
-  }
-  
-  .time-value {
-    font-size: 1.6rem;
-  }
-  
-  .time-label {
-    font-size: 0.6rem;
-  }
-  
-  .ideas-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 10px;
-  }
-  
-  .idea-card {
-    padding: 12px;
-  }
-  
-  .idea-image {
-    height: 100px;
-  }
-  
-  .idea-name {
-    font-size: 0.8rem;
   }
 }
 
