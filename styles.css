@@ -33,7 +33,7 @@ body::before {
 }
 
 .certificate-container {
-  padding: 40px 30px;
+  padding: 40px 20px;
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -513,7 +513,7 @@ body::before {
 @media (min-width: 768px) {
   .certificate-container {
     max-width: 600px;
-    padding: 50px 40px;
+    padding: 50px 20px;
   }
 
   .birthday-title {
